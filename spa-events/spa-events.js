@@ -41,7 +41,6 @@ async function fetchAndDisplaySpaEvents() {
   }
 }
 
-
 window.addEventListener('load', () => {
   fetchAndDisplaySpaEvents();
 });
