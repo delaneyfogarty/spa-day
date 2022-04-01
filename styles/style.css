@@ -20,7 +20,7 @@ body {
 
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
-    background-image: url()
+    background-image: url('../assets/spa.png')
 }
 
 main {
@@ -133,9 +133,12 @@ footer {
 
 .events-body div {
     width: 200px;
-    margin: 10px;
+    margin: 23px;
     border: solid 1px black;
-    padding: 10px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .events-container {
@@ -145,5 +148,6 @@ footer {
     min-width: 500px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
 }
