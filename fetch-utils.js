@@ -27,7 +27,8 @@ export async function deleteSpaGuest(id){
   const response = await client
     .from('spa_guests')
     .delete()
-    .match({ id: id });
+    .match({ id: id })
+    .single();
 
   return response;
 }

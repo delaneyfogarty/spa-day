@@ -41,5 +41,5 @@ window.addEventListener('load', async () => {
 checkAuth();
 
 logoutButton.addEventListener('click', () => {
-	logout();
+  logout();
 });
