@@ -21,12 +21,13 @@ async function fetchAndDisplaySpaEvents() {
 
     eventNameEl.textContent = event.name;
     eventEl.classList.add('event');
-    guestDiv.classList.add('guest');
+    guestDiv.classList.add('guests');
 
-    for (let guest of guest.spa_guests) {
+    for (let guest of event.spa_guests) {
       const guestEl = document.createElement('p');
 
       guestEl.textContent = guest.name;
+      guestEl.classList.add('guest');
 
       guestEl.addEventListener('click', async () => {
         await deleteSpaGuest(guest.id);
@@ -34,15 +35,16 @@ async function fetchAndDisplaySpaEvents() {
       });
       guestDiv.append(guestEl);
     }
-    eventEl.append(guestDiv, eventNameEl);
+    eventEl.append(eventNameEl, guestDiv);
 
     eventsDiv.append(eventEl);
 
   }
 }
 
-window.addEventListener('load', () => {
-  fetchAndDisplaySpaEvents();
+window.addEventListener('load', async () => {
+  const events = await fetchSpaEvents();
+  fetchAndDisplaySpaEvents(events);
 });
 
 

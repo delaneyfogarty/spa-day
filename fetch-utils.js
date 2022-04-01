@@ -1,5 +1,5 @@
-const SUPABASE_URL = '';
-const SUPABASE_KEY = '';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6bnNjZXFwa25zbnZ5dnJtZXhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDc5NzEzOTksImV4cCI6MTk2MzU0NzM5OX0.0rQxsYTXfd8cbn-mlX01dpPccunID0HFXDu7koSZ5Ms';
+const SUPABASE_URL = 'https://lznsceqpknsnvyvrmexq.supabase.co';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -7,11 +7,11 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function fetchSpaEvents(){
   const response = await client
     .from('spa_events')
-    .select(`*,
+    .select(`
+    *,
     spa_guests (*)`
     );
-
-  return response;
+  return response.body;
 }
 
 export async function createSpaGuest(guest){
