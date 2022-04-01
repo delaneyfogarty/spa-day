@@ -12,14 +12,18 @@ body {
     --color3: hsla(315, 37%, 86%, 1);
     --color4: hsla(45, 73%, 98%, 1);
     --color5: hsla(224, 40%, 79%, 1); */
-    
+
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
-    
+
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url('/assets/spa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 main {
@@ -48,9 +52,9 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: transparent;
     height: var(--header-height);
-    box-shadow: var(--shadow);
+
 }
 
 h2 {
@@ -73,7 +77,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -85,7 +89,7 @@ footer {
     box-shadow: var(--shadow);
 }
 
-  
+
   @keyframes pulse {
     20% {
       transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
@@ -124,8 +128,95 @@ footer {
 .auth-container form {
     display: flex;
     flex-direction: column;
+    background-color: rgba(6, 71, 45, 0.45);
+    color: azure;
 }
 
 .auth-container button {
     margin: 10px;
+    background-color:azure;
+    color: black;
+
 }
+
+/* .events-body div {
+    width: 200px;
+    margin: 23px;
+    border: solid 1px black;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+} */
+
+.events-container {
+
+    width: 80%;
+    min-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: rgba(6, 71, 45, 0.45);
+}
+
+.event {
+    width: 200px;
+    margin: 23px;
+    border: solid 1px black;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(214, 140, 10, 0.75);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.event h3 {
+    margin: 0;
+
+    text-align: center;
+
+
+}
+
+.guest {
+    margin: 0;
+    padding: 0;
+    border: dotted 2px black;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.guests {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+#logout {
+    background-color: azure;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+
+}
+
+.form {
+    position: absolute;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    top: 40%;
+    left: 20%;
+
+}
+

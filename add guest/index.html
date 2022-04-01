@@ -15,18 +15,27 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="../assets/big-logo.png" />
-        </div>
-    </header>    
+        <a href="../spa-events">Activities</a>
+    </header>
     <button id="logout">Logout</button>
-    <main>
-        <h1>You are logged in!</h1>
+    <main class="form">
+
+     <form class="guest-form">
+        <label>
+            <input name="name">
+        </label>
+        <label>
+            <select name="event_id">
+
+            </select>
+        </label>
+        <button>Add Spa Guest</button>
+        </form>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
-    <script type="module" src="./other-page.js"></script>
+    <script type="module" src="./guest.js"></script>
 </body>
 
 </html>
